@@ -19,11 +19,8 @@ def get_users_all():
     ]
 
     user = {"id": 1, "name": "test", "telefono": "999-666-333"}
-    print("traza 2")
     query = request.args.get('query')
-    print("traza 3")
     if query:
-        print("traza 4")
         user["query"] = query
     return jsonify(users), 200
 
@@ -32,7 +29,6 @@ def get_user(user_id):
     user = {"id": user_id, "name": "test", "telefono": "999-666-333"}
     query = request.args.get('query')
     if query:
-        print("traza 4")
         user["query"] = query
     return jsonify(user), 200
 
